@@ -6,6 +6,12 @@
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
+/**
+ * custom module
+ */
+
+const login = require('./src/routes/login.route');
+
 // Initialize express server
 
 const express = require('express');
@@ -27,15 +33,13 @@ app.use(express.static(`${__dirname}/public`));
  * Enable cors and cookie parsing
  */
 
-
+app.use(cors()).use(cookieParser());
 
 /**
  * Login page
  */
 
-app.get('/login', (req, res) => {
-    res.send(`Welcome to Login!`);
-});
+app.use('/login', login);
 
 app.listen(5000, () => {
     console.log(`Server listening on http://localhost:5000`);
