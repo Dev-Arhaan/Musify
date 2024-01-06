@@ -16,7 +16,7 @@
         favicon
     -->
 
-    <link rel="shortcut icon" href="/public/images/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/images/favicon.svg" type="image/svg+xml">
 
     <!--
         google fonts
@@ -28,8 +28,42 @@
 <!--
     Custom CSS
 -->
+<link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <h1>Login Page</h1>
+    
+    <article class="login-page">
+        <div class="banner">
+            <img src="/public/images/login-banner.jpg" width="1080" height="1080" alt="" class="img-cover">
+        </div>
+        <div class="content">
+            <a href="/" class="logo">
+                <img src="/images/logo.svg" width="94" height="24" alt="Musify logo">
+            </a>
+
+            <div class="wrapper">
+                <h2 class="title headline-medium">
+                    <strong>Join us</strong> and embark on an incredible musical <strong>Journey!</strong>
+                </h2>
+
+                <a href="/auth" class="btn btn-primary has-icon" data-ripple>
+                    <img src="/images/spotify-on-primary.svg" width="18" height="18" alt="">
+                
+                    <span class="label-large">Continue with spotify</span>
+
+                    <div class="state-layer"></div>
+                </a>
+
+            </div>
+
+            <p class="bottom-text label-large">
+                Powered by <a href="https://spotify.com" target="_blank" class="link link-primary"></a>
+                Spotify
+            </p>
+
+        </div>
+
+    </article>
+
 </body>
 </html>
